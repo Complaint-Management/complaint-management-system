@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping(path="/complaint")
+@CrossOrigin
 public class MainController {
 
     @Autowired
@@ -64,9 +65,9 @@ public class MainController {
         // @RequestParam means it is a parameter from the GET or POST request
         final JSONObject obj = new JSONObject(request);
         System.out.println(obj);
-        Integer rollNumber = obj.getInt("RollNumber");
-        String name = obj.getString("Name");
-        String complaint = obj.getString("Complain");
+        Integer rollNumber = Integer.parseInt(obj.getString("roll"));
+        String name = obj.getString("name");
+        String complaint = obj.getString("complain");
 
         Complaint complain = new Complaint();
         complain.setRollNumber(rollNumber);
