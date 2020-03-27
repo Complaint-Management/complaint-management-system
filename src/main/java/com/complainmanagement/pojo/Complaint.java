@@ -27,7 +27,7 @@ public class Complaint {
     private String remark;
 
     @Column(name="resolved")
-    private Integer resolved;
+    private int resolved;
 
 
 }
