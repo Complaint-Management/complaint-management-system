@@ -1,6 +1,4 @@
 package com.complainmanagement.controller;
-
-
 import com.complainmanagement.pojo.Complaint;
 import com.complainmanagement.pojo.Student;
 import com.complainmanagement.pojo.Teacher;
@@ -99,6 +97,4 @@ public class MainController {
         Integer rollno = Integer.parseInt(roll);
         return complainRepository.findByRollNumberAndResolved(rollno);
     }
-
-
 }

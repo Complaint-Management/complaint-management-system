@@ -28,6 +28,4 @@ public class Complaint {
 
     @Column(name="resolved")
     private int resolved;
-
-
 }
